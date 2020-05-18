@@ -31,7 +31,7 @@ USER_URL="${PROTOCOL}://${HOST}:${PORT}/auth/admin/realms/${REALM}/users"
 
 GRANT=$(curl --silent -k -X POST "${TOKEN_URL}" \
  -H "Content-Type: application/x-www-form-urlencoded" \
- -H "Host: localhost:8080" \
+ -H "Host: ${HOST}:${PORT}" \
  -d "username=${USERNAME}" \
  -d "password=${PASSWORD}" \
  -d 'grant_type=password' \
